@@ -1,10 +1,11 @@
 type ButtonPropsType = {
-  callBack: any // НУЖНО ПРОТИПИЗИРОВАТЬ
-  name: any // НУЖНО ПРОТИПИЗИРОВАТЬ
+  callBack: (name:string)=>void // НУЖНО ПРОТИПИЗИРОВАТЬ
+  name: string // НУЖНО ПРОТИПИЗИРОВАТЬ
 };
 
 export const Button = (props: ButtonPropsType) => {
   const callBackHandler = () => {
+    props.callBack(props.name)
     // НУЖНО ДОПИСАТЬ
   };
 
